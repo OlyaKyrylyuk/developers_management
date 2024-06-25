@@ -24,7 +24,7 @@
                         <field name="name"/>
                         <field name="type"/>
                         <field name="global_identification" readonly="1"/>
-                        <field name="phone"/>
+                        <field name="phone" attrs="{'invisible': [('type', '=', 'out-stuff')]}"/>
                         <field name="email"/>
                         <field name="address"/>
                         <field name="birth_date"/>

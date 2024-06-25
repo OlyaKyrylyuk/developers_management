@@ -26,3 +26,8 @@ class Developer(models.Model):
     def global_identification_compute(self):
         for developer in self:
             developer.global_identification = f"{developer.name}-{developer.type}"
+
+    @api.onchange('type')
+    def _onchange_type(self):
+        if self.type == 'out-stuff':
+            self.phone = False
