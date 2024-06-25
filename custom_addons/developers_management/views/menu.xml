@@ -1,0 +1,39 @@
+<odoo>
+    <record id="developer_list_action" model="ir.actions.act_window">
+        <field name="name">Developers</field>
+        <field name="res_model">developer</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="developer_form_action" model="ir.actions.act_window">
+        <field name="name">Add Developer</field>
+        <field name="res_model">developer</field>
+        <field name="view_mode">form</field>
+    </record>
+
+    <record id="company_list_action" model="ir.actions.act_window">
+        <field name="name">Companies</field>
+        <field name="res_model">company</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="company_form_action" model="ir.actions.act_window">
+        <field name="name">Add Company</field>
+        <field name="res_model">company</field>
+        <field name="view_mode">form</field>
+    </record>
+
+    <menuitem id="menu_developers_management_root" name="Developers Management"/>
+
+    <menuitem id="menu_developer" name="Developers" parent="menu_developers_management_root"/>
+    <menuitem id="menu_action_view_developers" name="View Developers" parent="menu_developer"
+              action="developers_management.developer_list_action"/>
+    <menuitem id="menu_action_add_developer" name="Add Developer" parent="menu_developer"
+              action="developers_management.developer_form_action"/>
+
+    <menuitem id="menu_company" name="Companies" parent="menu_developers_management_root"/>
+    <menuitem id="menu_action_view_companies" name="View Companies" parent="menu_company"
+              action="developers_management.company_list_action"/>
+    <menuitem id="menu_action_add_company" name="Add Company" parent="menu_company"
+              action="developers_management.company_form_action"/>
+</odoo>

@@ -1,0 +1,37 @@
+<odoo>
+    <record id="developer_tree" model="ir.ui.view">
+        <field name="model">developer</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="type"/>
+                <field name="global_identification"/>
+                <field name="email"/>
+                <field name="phone"/>
+                <field name="address"/>
+                <field name="birth_date"/>
+                <field name="company_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="developer_form" model="ir.ui.view">
+        <field name="model">developer</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="type"/>
+                        <field name="global_identification" readonly="1"/>
+                        <field name="phone"/>
+                        <field name="email"/>
+                        <field name="address"/>
+                        <field name="birth_date"/>
+                        <field name="company_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>
