@@ -4,6 +4,9 @@ from lxml import etree
 class Developer(models.Model):
     _name = 'developer'
     _description = 'Developer'
+    _sql_constraints = [
+        ('name_unique', 'unique(name)', 'The name must be unique.')
+    ]
 
     name = fields.Char(string='Name', required=True)
     type = fields.Selection([
