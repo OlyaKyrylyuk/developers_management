@@ -1,5 +1,5 @@
 from odoo import models, fields, api
-from lxml import etree
+
 
 class Developer(models.Model):
     _name = 'developer'
@@ -15,7 +15,8 @@ class Developer(models.Model):
         ('fullstack', 'Fullstack'),
         ('out-stuff', 'Out-Stuff')
     ], string='Type', required=True)
-    global_identification = fields.Char(string='Global Identification', compute='global_identification_compute', store=True)
+    global_identification = fields.Char(string='Global Identification', compute='global_identification_compute',
+                                        store=True)
     phone = fields.Char(string='Phone')
     email = fields.Char(string='Email')
     address = fields.Text(string='Address')

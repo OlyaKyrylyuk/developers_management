@@ -1,5 +1,6 @@
 from odoo import models, fields
 
+
 class Company(models.Model):
     _name = 'company'
     _description = 'Company'
