@@ -4,6 +4,8 @@
     'category': 'Uncategorized',
     'summary': 'Developers management module',
     'depends': ['base'],
+    'author': 'Olha',
+    'license': 'LGPL-3',
     'data': [
         'security/ir.model.access.csv',
         'views/developer_views.xml',
